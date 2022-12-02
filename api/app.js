@@ -1,12 +1,17 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+require('dotenv').config()
+require('app-module-path').addPath(__dirname);
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const mongoose = require('mongoose');
 
-var app = express();
+connectToMongo();
+
+const indexRouter = require('./routes/index');
+
+const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -15,6 +20,20 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+
+
+
+async function connectToMongo() {
+    await mongoose.connect(process.env.MONGO_URI_STRING, {
+        useUnifiedTopology: true,
+        useNewUrlParser: true
+    })
+    .then(() => {
+        console.info("========= MongoDB Connected with Mongoose =========");
+    })
+    .catch((e) => {
+        console.error(e);
+    });
+}
 
 module.exports = app;
