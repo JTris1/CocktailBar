@@ -12,6 +12,7 @@ coverage
 build
 
 # misc
+*.css.map
 .env
 .DS_Store
 .env.local

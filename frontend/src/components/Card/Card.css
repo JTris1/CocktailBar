@@ -1,0 +1,31 @@
+.card {
+  width: 450px;
+  margin: 50px 0;
+}
+.card .card-img-top {
+  width: 100%;
+}
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+h6 {
+  font-size: 1.3em;
+  text-decoration: underline;
+}
+
+.card-title {
+  font-size: 2em;
+  align-self: left;
+  font-weight: 600;
+}
+
+.card-subtitle {
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.1em;
+}/*# sourceMappingURL=Card.css.map */

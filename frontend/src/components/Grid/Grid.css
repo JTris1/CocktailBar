@@ -1,0 +1,7 @@
+.card-grid {
+  display: flex;
+  justify-content: space-around;
+}
+.card-grid .row {
+  display: inherit;
+}/*# sourceMappingURL=Grid.css.map */
