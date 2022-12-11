@@ -1,6 +1,10 @@
 export default function Ingredients(props) {
     const ingredientList = props.ingredients.map((i, index) => {
-        return <li key={index}>{i.ingredient} <span className="text-muted">({`${i.amount} ${i.unit}`})</span></li>
+        return (
+            i.special === undefined ? 
+                <li key={index}>{i.ingredient} <span className="text-muted">({`${i.amount} ${i.unit}`})</span></li> :
+                <li key={index}>{i.special}</li>
+        ) 
     })
 
     return (

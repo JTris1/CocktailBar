@@ -1,9 +1,9 @@
 .card-grid {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 
     .row {
         display: inherit;
-
+        justify-content: center;
     }
 }

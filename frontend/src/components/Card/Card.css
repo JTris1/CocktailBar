@@ -1,6 +1,7 @@
 .card {
   width: 450px;
   margin: 50px 0;
+  cursor: pointer;
 }
 .card .card-img-top {
   width: 100%;

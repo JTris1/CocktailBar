@@ -9,7 +9,7 @@ function Card(props) {
 
     return (
         <>
-            {isShown ? <Modal onClose={() => setIsShown(false)} glass={props.glass} ingredients={props.ingredients} garnish={props.garnish} preparation={props.preparation} /> : null}
+            {isShown ? <Modal onClose={() => setIsShown(false)} name={props.name} image={props.image} glass={props.glass} ingredients={props.ingredients} garnish={props.garnish} preparation={props.preparation} /> : null}
             <div className="card" onClick={() => {
                 setIsShown(true)
             }}>

@@ -3,8 +3,11 @@
 .header {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100px;
 }
 
 .header-title {
     font-family: Oswald, sans-serif;
+    font-size: 4em;
 }
