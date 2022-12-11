@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     async function getData() {
       try {
-        const response = await axios.get("http://localhost:5000/");
+        const response = await axios.get("https://api-dot-jdtrisle-cocktailbar.uc.r.appspot.com/");
         setRecipes(response.data);
       }
       catch(e) {
