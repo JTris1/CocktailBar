@@ -40,8 +40,26 @@
   margin-bottom: 0;
 }
 .modal-no-bs .modal-body-no-bs .row .col:nth-child(1) img {
-  width: 300px;
+  min-height: 100%;
+  min-width: 265px;
 }
 .modal-no-bs .modal-body-no-bs .row .col:nth-last-child(1) {
   margin: 16px 25px 25px 0;
+}
+.modal-no-bs .modal-body-no-bs .row .col:nth-last-child(1) h6 {
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 950px) {
+  .modal-no-bs .modal-body-no-bs .row .col:nth-child(1) {
+    display: flex;
+    justify-content: center;
+  }
+  .modal-no-bs .modal-body-no-bs .row .col:nth-child(1) img {
+    height: auto;
+    width: 300px;
+  }
+  .modal-no-bs .modal-body-no-bs .row .col:nth-last-child(1) {
+    margin: 25px;
+  }
 }/*# sourceMappingURL=Modal.css.map */

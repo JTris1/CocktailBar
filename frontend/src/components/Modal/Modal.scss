@@ -8,52 +8,6 @@
     z-index: 1000;
 }
 
-// .modal-body-no-bs {
-//     display: flex;
-//     flex-direction: column;
-//     position: fixed;
-//     width: 500px;
-//     height: auto;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     background-color: rgb(255, 255, 255);
-//     z-index: 1000;
-//     padding: 50px;
-
-//     .modal-header {
-//         display: flex;
-//         flex-direction: row;
-//         width: 100%;
-//         align-items: center;
-
-//         .modal-header-name {
-//             text-align: center;
-
-//             font-size: 2em;
-//             font-weight: 700;
-//         }
-
-//         .modal-close-button {
-//             padding: 0;
-//             justify-self: end;
-//             font-variation-settings:
-//             'FILL' 0,
-//             'wght' 700,
-//             'GRAD' 0,
-//             'opsz' 48;
-//             font-size: 2.5em;
-//             cursor: pointer;
-//         }
-//     }
-
-//     .modal-image {
-//         img {
-//             padding: 0;
-//         }
-//     }
-// }
-
 .modal-no-bs {
     position: fixed;
     width: auto;
@@ -100,13 +54,38 @@
         .row {
             .col:nth-child(1) {
                 img {
-                    width: 300px;
+                    min-height: 100%;
+                    min-width: 265px;
                 }
             }
             .col:nth-last-child(1) {
                 margin: 16px 25px 25px 0;
+
+                h6 {
+                    font-size: 1.5em;
+                }
             }
-            
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .modal-no-bs {
+        .modal-body-no-bs {
+            .row {
+                .col:nth-child(1) {
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        height: auto;
+                        width: 300px;
+                    }
+                }
+                .col:nth-last-child(1) {
+                    // margin: 16px 25px 25px 0;
+                    margin: 25px;
+                }
+            }
         }
     }
 }
