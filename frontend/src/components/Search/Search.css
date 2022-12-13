@@ -1,0 +1,8 @@
+form {
+  display: flex;
+  justify-content: center;
+}
+form #searchBox {
+  width: 40vw;
+  margin-right: 5px;
+}/*# sourceMappingURL=Search.css.map */
