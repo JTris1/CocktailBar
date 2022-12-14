@@ -14,8 +14,9 @@ router.get('/', async function(req, res, next) {
     res.json(namesOnly);
   }
   else {
-  const recipes = await Recipe.find(req.query);
-  res.json(recipes);
+    const recipes = await Recipe.find(req.query);
+    console.log(recipes)
+    res.json(recipes);
   }
 });
 
