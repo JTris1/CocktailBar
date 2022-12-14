@@ -43,7 +43,40 @@ function App() {
       <div className='container'>
         <Header />
         <Search getSearchResults={getSearchResults}/>
-        <Grid recipes={recipes} />
+        {searchResults.categories.length === 0 && searchResults.drinks.length === 0 && searchResults.ingredients.length === 0 ? 
+          <Grid recipes={recipes} /> : 
+          
+          <div className='search-results'>
+              <div className='category-results'>
+                {searchResults.categories.length === 0 ? undefined :
+                  <>
+                    <h2>Categories</h2>
+                    <Grid recipes={searchResults.categories} />
+                  </>
+                }
+              </div>
+              
+              <div className='drink-results'>
+                {searchResults.drinks.length === 0 ? undefined :
+                  <>
+                    <h2>Drinks</h2>
+                    <Grid recipes={searchResults.drinks} />
+                  </>
+                }
+              </div>
+              
+              <div className='ingredient-results'>
+                <p>{searchResults.ingredients}</p>
+                {searchResults.ingredients.length === 0 ? undefined :
+                  <>
+                    <h2>Ingredients</h2>
+                    <Grid recipes={searchResults.ingredients} />
+                  </>
+                }
+              </div>
+          </div>
+        }
+        
       </div>
     </div>
   );
